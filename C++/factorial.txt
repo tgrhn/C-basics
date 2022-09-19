@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    int factorial=1;
+    cout<<"Enter the number that you wanno know its factorial"<<endl;
+    cin>>n;
+    if(n<0){
+    	cout<<"Enter a positive number!"<<endl;
+    	return 0;
+	}
+	for(int i=1;i<=n;i++){
+		factorial=factorial*i;
+	}
+	cout<<factorial<<endl;
+    return 0;
+}

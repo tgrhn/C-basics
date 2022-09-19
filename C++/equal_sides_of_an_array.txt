@@ -1,0 +1,43 @@
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+int main(){
+	int numbers[7]= {20,10,-80,10,10,15,35};
+	int i = 0;
+		int sum1 = 0;
+	int sum2 = 0;
+	bool f = false;
+	while(i<sizeof(numbers)/sizeof(numbers[0])){
+		for(int k = i+1; k<sizeof(numbers)/sizeof(numbers[0]);k++){
+			sum2+=numbers[k];
+		}
+	//cout<<sum2<<endl;
+		
+			for(int k = i-1 ; k>=0;k--){
+			sum1+=numbers[k];
+		}
+	//cout<<sum1<<endl;
+		if(sum1==sum2){
+		cout<<i<<endl;
+		f = true;
+		break;
+		}
+		else{
+			sum1=0;
+			sum2=0;
+			f=false;
+		}
+		
+		i++;
+	}
+	if(f){	
+	cout<<sum1<<endl;
+	cout<<sum2<<endl;
+}
+	else{
+	cout<<"basarisiz"<<endl;
+}
+	
+	return 0 ;
+}

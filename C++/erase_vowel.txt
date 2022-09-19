@@ -1,0 +1,16 @@
+str.erase(remove(str.begin(), str.end(), 'a'), str.end());
+str.erase(remove(str.begin(), str.end(), 'e'), str.end());
+str.erase(remove(str.begin(), str.end(), 'i'), str.end());
+str.erase(remove(str.begin(), str.end(), 'o'), str.end());
+str.erase(remove(str.begin(), str.end(), 'u'), str.end());
+
+# include <string>
+
+std::string disemvowel(std::string str)
+{
+    for ( auto letter : "AEIOUaeiou" ) {
+      str.erase(std::remove(str.begin(), str.end(), letter), str.end());
+    }
+    
+    return str;
+}

@@ -1,0 +1,18 @@
+class Kata {
+  public:
+    static bool validate(long long int n) {
+      int sum = 0;
+      bool dbl = false;
+      while (n > 0) {
+        int digit = n % 10;
+        n /= 10;  
+        if (dbl) {
+          digit *= 2;
+          if (digit > 9) digit -= 9;
+        }
+        dbl = !dbl;
+        sum += digit;
+      }
+      return (sum % 10 == 0);
+    }
+};

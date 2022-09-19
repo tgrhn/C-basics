@@ -1,0 +1,23 @@
+# include <iostream>
+using namespace std;
+
+int main() {
+	int n;
+	int result=0;
+	cout<<"Enter the size of the array!"<<endl;
+	cin>>n;
+	int x[n]={0};
+	
+	for(int i=0;i<n;i++){
+		cout<<"Enter the number that you want to create in your array!"<<endl;
+		cin>>x[i];
+	}
+	int max=x[0];
+	for(int i=1;i<=n;i++){
+		if(max<x[i]){
+			max=x[i];
+		}
+	}
+	cout<<"Max value of array is"<<" "<<max<<endl;
+  return 0;
+}

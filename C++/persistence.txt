@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char** argv) {
+	int n =4;
+	int counter=0;
+	int nn = 1;
+	if(n<10){
+		counter==0;
+	}
+	while(n>10){
+		while(n!=0){
+		
+		nn = nn*(n%10);
+		
+		n = n/10;
+		//cout<<n<<endl;
+		
+	}
+	counter++;
+	n = nn;
+	nn=1;
+	}
+cout<<counter<<endl;
+	return 0;
+}

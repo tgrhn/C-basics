@@ -1,0 +1,17 @@
+#include <iostream>  
+#include <sstream>  
+#include <string>
+#include <algorithm>
+using namespace std;  
+
+uint64_t descendingOrder(uint64_t a)
+{
+  stringstream ss;  
+  ss<<a;  
+  string s;  
+  ss>>s;  
+  
+  sort(s.rbegin(),s.rend());
+ 
+  return stoull(s);
+}

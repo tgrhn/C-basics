@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+	int rows;
+	int x=65;
+	cout<<"Enter number of rows!"<<endl;
+	cin>>rows;
+	for(int i=rows;i>=1;i--){
+		for(int k=1;k<=i;k++){
+			cout<<"*"<<" ";
+		}
+		x++;
+		cout<<endl;
+	}
+
+    return 0;
+}

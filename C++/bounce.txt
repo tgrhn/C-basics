@@ -1,0 +1,28 @@
+//#include <sstream>
+#include <iostream>
+using namespace std;
+
+int Bouncingball(double h, double bounce, double window)
+{
+//	stringstream ss;
+	static int counter;
+  if((h>0) && (bounce>0) && (bounce<1) && (h>window)){
+  	counter++;
+    while(h>window){
+      
+      h=h*bounce;
+      if(h<window){
+      	break;
+	  }
+      
+      counter = counter+2;
+    }
+    return counter;
+  }
+  else{
+    return -1;
+  }
+};
+int main(){
+cout<<Bouncingball(3,0.66,1.5);
+}

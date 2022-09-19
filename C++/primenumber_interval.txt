@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x,y;
+    int max,min;
+    
+	
+	cout<<"Enter two numbers"<<endl;
+	cin>>x>>y;
+	bool isPrime;
+	if(x>y){
+		max=x;
+		min=y;
+	}
+	else{
+		max=y;
+		min=x;
+	}
+	if(x==0&&y==1){
+		isPrime=false;
+	}
+	else if(x==1&&y==0){
+		isPrime=false;
+	}
+	
+	while(min<max){
+	isPrime=true;	
+	
+	for(int i=2;i<=min/2;i++){
+		if(min%i==0){
+			isPrime=false;
+			break;
+		}
+		
+	}
+	if(isPrime){
+		cout<<min<<",";
+	}
+
+	min++;
+}
+
+    return 0;
+}
